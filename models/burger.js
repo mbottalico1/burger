@@ -7,12 +7,12 @@ var burgers = {
 		});
 	},
 	create: function(burger_name, cb){
-		orm.create(burger_name, function(res){
+		orm.create('burgers', burger_name, function(res){
 			cb(res);
 		});
 	},
-	update: function(burger_id, cb){
-		orm.update(burger_id, function(res){
+	update: function(burger_name, cb){
+		orm.update('burgers', burger_name, function(res){
 			cb(res);
 		});
 	}
