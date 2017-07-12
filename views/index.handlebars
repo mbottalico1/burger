@@ -1,10 +1,7 @@
-<h1>Eat-The-Burger</h1>
-
 <div class="row">
-  <center>
-    <div class="col-md-6">
-      <h3 class="ready">Your burger is ready to be eaten</h4>
-      <div id="ready2eat">
+    <div class="col-md-4">
+      <h3 class="ready">Burgers to be eaten</h4>
+      </div>
 
 <ul>
   {{#each burger}}
@@ -21,9 +18,21 @@
   {{/each}}
 </ul>
 
-<div class="col-md-6">
+<form class="create-update-form" action="/" method="POST">
+<center>
+<div class="col-md-4">
+  <div class="form-group">
+    <label for="bu">Name of Burger:</label>
+    <input type="text" id="bu" name="name">
+ 
+  <button type="submit">Add Burger</button>
+</form>
+</div>
+</div>
+
+<div class="col-md-4">
+  <div id="burgers-eaten">
       <h4 class="Eaten">Burgers already eaten!</h4>
-      <div id="burgers-eaten">
 
         {{#each burgers}}
           {{#if this.devoured}}
@@ -36,14 +45,3 @@
       </div>
     </div>
 </div>
-
-
-<form class="create-update-form" action="/" method="POST">
-
-  <div class="form-group">
-    <label for="bu">Name of Burger:</label>
-    <input type="text" id="bu" name="name">
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
